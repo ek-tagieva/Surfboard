@@ -1,0 +1,110 @@
+.team__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.team__title {
+    text-align: center;
+    // flex-basis: 10%;
+    margin: 10% 0 5%;
+}
+.team {
+    // margin-top: 10%;
+    &--desktop {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &--mobile {
+        display: none;
+    }
+    &__item {
+        width: 220px;
+        margin-right: 15px;
+        text-align: center;
+    }
+    &__picture {
+        // margin: 18px 0;
+        border: solid 2px #000;
+        transition: all .6s;
+    }
+    &__name {
+        margin: 18px 0 0;
+        background: none;
+        border: none;
+        font-size: 21px;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-right: 10px;
+        &::after {
+            content: '';
+            display: inline-block;
+            border: solid 6px transparent;
+            border-top: solid 10px black;
+            position: absolute;
+            top: 9px;
+            right: -12px;
+            transition: all .5s;
+            transform: rotate(0deg);
+            transform-origin: 50% 25%;
+        }
+    }
+    &__content {
+        // margin-top: 18px;
+        text-align: center;
+        overflow: hidden;
+        transition: all .5s;
+        p:first-child {
+            font-weight: 700;
+        }
+    }
+}
+
+.accordion {
+    &-desktop .team__content {
+        height: 0;
+    }
+    &-desktop--active .team__content {
+        height: 100px;
+    }
+    &-desktop--active .team__name::after {
+        transform: rotate(900deg);
+    }
+    &-mobile .team__content,
+    &-mobile .team__picture {
+        height: 0;
+    }
+    &-mobile--active .team__content {
+        height: 100px;
+    }
+    &-mobile--active .team__picture {
+        height: 300px;
+        border: solid 2px #000;
+    }
+    &-mobile--active .team__name::after {
+        transform: rotate(900deg);
+    }
+}
+
+@media(max-width:768px) {
+    .team--desktop {
+        display: none;
+    }
+    .team--mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team {
+        &__item {
+            margin: 0;
+        }
+        &__picture {
+            border: none;
+        }
+    }
+}

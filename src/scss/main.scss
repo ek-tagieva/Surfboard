@@ -1,0 +1,28 @@
+// variables
+$baseFontSize: 18px;
+$containerWidth: 1120px;
+
+// colors
+$bgGrey: #F8FAF9;
+
+//JS components
+// @import "https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css";
+// @import "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css";
+
+@import "./media.scss";
+// components
+@import "./layout.scss";
+@import "./components/header.scss";
+@import "./components/hero.scss";
+@import "./components/features.scss";
+@import "./components/shop.scss";
+@import "./components/team.scss";
+@import "./components/horiz-accord.scss";
+@import "./components/feedback.scss";
+@import "./components/video.scss";
+@import "./components/order.scss";
+@import "./components/modal.scss";
+@import "./components/map.scss";
+@import "./components/footer.scss";
+@import "./components/fixed-menu.scss";
+

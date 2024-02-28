@@ -1,0 +1,130 @@
+.video__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.video {
+    background: #F8FAF9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.video__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.video__title {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+.player {
+    max-width: 660px;
+    min-height: 400px;
+    margin: auto;
+    color: #fff;
+    &__wrapper {
+    }
+    &__elem {
+    }
+    &__splash {
+    }
+    &__controls {
+        background: #404040;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+        margin-top: -6px;
+        position: relative;
+    }
+    &__start {
+        background: none;
+        border: none;
+        padding: 5px 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+    &__playback {
+        width: 400px;
+        height: 18px;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: #626262;
+            position: relative;
+            top: 8px;
+        }
+    }   
+    &__line {
+        width: 0%;
+        height: 5px;
+        background: #FEDB3F;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+    &__playback-button {
+        width: 10px;
+        height: 10px;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 0%;
+        background: #FEDB3F;
+    }
+    &__duration {
+        padding-right: 10px;
+    }
+    &__volume {
+        position: relative;
+        &-sound {
+            background: none;
+            border: none;
+            padding: 5px 10px;
+            color: #fff;
+            position: absolute;
+            top: 1px;
+            right: 45px;
+            cursor: pointer;
+        }
+        cursor: pointer;
+        width: 40px;
+        height: 18px;
+        position: relative;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 5px;
+            background: #626262;
+            position: relative;
+            top: 8px;
+        }
+    }
+    &__volume-line {
+        width: 0%;
+        height: 5px;
+        background: #FEDB3F;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        z-index: 2;
+    }
+    &__volume-button {
+        width: 10px;
+        height: 10px;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 0%;
+        background: #FEDB3F;
+    }
+}

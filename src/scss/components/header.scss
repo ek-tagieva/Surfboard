@@ -1,0 +1,136 @@
+.header {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 30px;
+}
+.site-logo {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    svg {
+        width: 56px;
+        height: 40px;
+        fill: #fff;
+    }
+    &__link:hover use {
+        // fill: #636D8C;
+        stroke: #000;
+    }
+}
+.site-nav {
+    flex: 0 1 70%;
+}
+.site-nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.site-nav__item {
+    margin-right: 25px;
+}
+.site-nav__link:hover {
+    color: #cca806;
+}
+.site-contacts {
+    position: relative;
+    padding-left: 23px;
+    svg {
+        width: 18px;
+        height: 15px;
+    }
+    &__link:hover {
+        color: #cca806;
+        fill: #cca806;
+    }
+    &__link {
+        fill: #fff;
+    }
+}
+.burger {
+    display: none;
+    position: relative;
+    width: 26px;
+    height: 24px;
+    cursor: pointer;
+    span {
+        transition: all 0.3s;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 3px;
+        background: #fff;
+        
+    }
+    &--open span {
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+    &--close span {
+        &:nth-child(1) {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(-45deg);
+
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .header {
+        background: #1968B1;
+    }
+    .site-nav {
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        left: 0;
+        top: -100vh;
+        background: rgba(25, 104, 177, 0.9);
+        transition: all 0.5s;
+    }
+    .site-nav--active {
+        top: 10vh;
+    }
+    .site-nav__list {
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+        padding-top: 60px;
+    }
+    .site-nav__item {
+        margin: 0px 0px 20px 0px;
+    }
+    .site-contacts {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
+@media(max-width:480px) {
+
+}
